@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.message {
+    font-size: 1.5rem;
+}
+
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff6f61;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #e85850;
+}
+
+.hidden {
+    display: none;
+}
+
+.heart-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.heart {
+    width: 100px;
+    height: 90px;
+    background: #ff6f61;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: auto;
+    animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: #ff6f61;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    right: -50px;
+}
+
+.heart-shadow {
+    width: 100px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 20px auto 0;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+}

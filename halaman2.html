@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawabanmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" src="youngkai.mp3" loop autoplay></audio>
+    <div class="container">
+        <h1>Aku suka banget sama kamu! ❤️</h1>
+        <p>Maukah kamu jadi pacarku? 😊 ( dengerin dulu lagunya pls, enak banget nih hehe )</p>
+        <div>
+            <button id="yes-btn">yess💕</button>
+            <button id="no-btn">Noo😭</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("yes-btn").addEventListener("click", () => {
+            const messageContainer = document.createElement("div");
+            messageContainer.style.textAlign = "center";
+            messageContainer.style.marginTop = "20px";
+
+            const messageText = document.createElement("p");
+            messageText.textContent = "hehe untung kamu pilih iyaa, makasih ya udah mw nerima aku. aku tau aku banyak kekurangan tapi aku yakin bareng bareng kita pasti bisa sayang💕";
+            messageText.style.fontSize = "18px";
+            messageText.style.color = "#333";
+            messageContainer.appendChild(messageText);
+
+            const waButton = document.createElement("a");
+            waButton.href = "https://wa.me/6289603912349?text=hai kib, lo resmi jadi suami gw ya sekarang💕";
+            waButton.target = "_blank";
+            waButton.textContent = "Hubungi Saya di WhatsApp";
+            waButton.style.display = "inline-block";
+            waButton.style.marginTop = "10px";
+            waButton.style.padding = "10px 20px";
+            waButton.style.backgroundColor = "#25D366";
+            waButton.style.color = "white";
+            waButton.style.textDecoration = "none";
+            waButton.style.borderRadius = "8px";
+            waButton.style.fontSize = "16px";
+            waButton.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.2)";
+            waButton.style.cursor = "pointer";
+            waButton.onmouseover = () => (waButton.style.backgroundColor = "#20b957");
+            waButton.onmouseout = () => (waButton.style.backgroundColor = "#25D366");
+
+            messageContainer.appendChild(waButton);
+
+            document.body.innerHTML = ""; // Kosongkan halaman
+            document.body.appendChild(messageContainer); // Tambahkan pesan
+        });
+
+        document.getElementById("no-btn").addEventListener("click", () => {
+            alert("gw tau lo bakal pencet ini, iseng kan lo 🫵🏻 lo udah jadi pacar gw ya cantikk");
+        });
+    </script>
+</body>
+</html>
